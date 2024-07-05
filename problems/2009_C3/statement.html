@@ -1,0 +1,22 @@
+<div class="cmty-view-post-item-text">Let <img alt="$n$" class="latex" height="8" src="https://latex.artofproblemsolving.com/1/7/4/174fadd07fd54c9afe288e96558c92e0c1da733a.png" width="10"/> be a positive integer.  Given a sequence <span style="white-space:nowrap;"><img alt="$\varepsilon_1$" class="latex" height="10" src="https://latex.artofproblemsolving.com/0/8/b/08b6e06949a9c1d2553caf261174c09f7f66719b.png" style="vertical-align: -2px" width="14"/>,</span> <span style="white-space:nowrap;"><img alt="$\dots$" class="latex" height="2" src="https://latex.artofproblemsolving.com/6/4/6/64683f315744c851898c8d65dace1a8aa31b93ab.png" width="19"/>,</span> <img alt="$\varepsilon_{n - 1}$" class="latex" height="10" src="https://latex.artofproblemsolving.com/d/7/f/d7fbb7efbc26b149327d1d820ea506fecc3de629.png" style="vertical-align: -2px" width="32"/> with <img alt="$\varepsilon_i = 0$" class="latex" height="15" src="https://latex.artofproblemsolving.com/5/a/3/5a3da7f874e2f159f2562a570b715cabcd90a3ef.png" style="vertical-align: -2px" width="46"/> or <img alt="$\varepsilon_i = 1$" class="latex" height="14" src="https://latex.artofproblemsolving.com/9/e/c/9ec6e5d88b4e8b775c36dc095c116bd4617cbc3b.png" style="vertical-align: -2px" width="46"/> for each <span style="white-space:nowrap;"><img alt="$i = 1$" class="latex" height="13" src="https://latex.artofproblemsolving.com/7/7/4/7746ed746b280e2a83d7defebe5cfe5d557fc9c7.png" style="vertical-align: 0px" width="38"/>,</span> <span style="white-space:nowrap;"><img alt="$\dots$" class="latex" height="2" src="https://latex.artofproblemsolving.com/6/4/6/64683f315744c851898c8d65dace1a8aa31b93ab.png" width="19"/>,</span> <span style="white-space:nowrap;"><img alt="$n - 1$" class="latex" height="12" src="https://latex.artofproblemsolving.com/d/0/e/d0e80c6b6a84ad4015ea436a915435d69edbdd96.png" style="vertical-align: 0px" width="41"/>,</span> the sequences <span style="white-space:nowrap;"><img alt="$a_0$" class="latex" height="10" src="https://latex.artofproblemsolving.com/e/e/5/ee5c7c921b3334f6ecf58c241eeea42acf0ce71e.png" style="vertical-align: -2px" width="15"/>,</span> <span style="white-space:nowrap;"><img alt="$\dots$" class="latex" height="2" src="https://latex.artofproblemsolving.com/6/4/6/64683f315744c851898c8d65dace1a8aa31b93ab.png" width="19"/>,</span> <img alt="$a_n$" class="latex" height="10" src="https://latex.artofproblemsolving.com/6/f/1/6f1a2b6b7c193f9ba2b2134a59f1da5addcfbc98.png" style="vertical-align: -2px" width="17"/> and <span style="white-space:nowrap;"><img alt="$b_0$" class="latex" height="15" src="https://latex.artofproblemsolving.com/8/a/3/8a37bbf011fce8765b98bd83ef191b6184f3eecd.png" style="vertical-align: -2px" width="14"/>,</span> <span style="white-space:nowrap;"><img alt="$\dots$" class="latex" height="2" src="https://latex.artofproblemsolving.com/6/4/6/64683f315744c851898c8d65dace1a8aa31b93ab.png" width="19"/>,</span> <img alt="$b_n$" class="latex" height="15" src="https://latex.artofproblemsolving.com/8/f/f/8ffd01cdc48042ce7c67d8edcd4904809831cfe4.png" style="vertical-align: -2px" width="16"/> are constructed by the following rules: <img alt="\[a_0 = b_0 = 1, \quad a_1 = b_1 = 7,\]" class="latexcenter" height="16" src="https://latex.artofproblemsolving.com/d/f/d/dfd49833078b6b676cd261cc358e8114b2c4b7f4.png" width="208"/> <img alt="\[\begin{array}{lll}
+	a_{i+1} = 
+	\begin{cases}
+		2a_{i-1} + 3a_i, \\
+		3a_{i-1} + a_i, 
+	\end{cases} &amp; 
+        \begin{array}{l} 
+                \text{if } \varepsilon_i = 0, \\  
+                \text{if } \varepsilon_i = 1, \end{array} 
+         &amp; \text{for each } i = 1, \dots, n - 1, \\[15pt]
+        b_{i+1}= 
+        \begin{cases}
+		2b_{i-1} + 3b_i, \\
+		3b_{i-1} + b_i, 
+	\end{cases} &amp; 
+        \begin{array}{l} 
+                \text{if } \varepsilon_{n-i} = 0, \\  
+                \text{if } \varepsilon_{n-i} = 1, \end{array} 
+         &amp; \text{for each } i = 1, \dots, n - 1.
+	\end{array}\]" class="latexcenter" height="116" src="https://latex.artofproblemsolving.com/8/9/0/8908021c60992e39acdb4fcf6b587f96b88539e0.png" width="506"/>  Prove that <span style="white-space:nowrap;"><img alt="$a_n = b_n$" class="latex" height="15" src="https://latex.artofproblemsolving.com/a/3/4/a348e3f9a44c4c68b3486ed0b3e76e490e8b91fd.png" style="vertical-align: -2px" width="59"/>.</span><br/>
+<br/>
+<i>Proposed by Ilya Bogdanov, Russia</i></div>
