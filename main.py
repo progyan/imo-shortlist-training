@@ -10,8 +10,14 @@ topics = {
     "N": "Number Theory"
 }
 
+topic = input("Choose topic A/C/G/N or leave empty: ")
+if topic not in "AGCN" or len(topic) > 1:
+    raise Exception("Invalid topic")
+
 prob = choice(os.listdir("./problems"))
-#print(prob)
+while topic and prob[5] != topic:
+    prob = choice(os.listdir("./problems"))
+
 with open("./problems/" + prob + "/rating.txt", "r") as f:
     rating = int(f.readline())
 with open("./rating/" + prob[5] + ".txt", "r") as f:
