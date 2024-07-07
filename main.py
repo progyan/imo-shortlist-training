@@ -20,19 +20,19 @@ prob = choice(os.listdir("./problems"))
 while topic and prob[5] != topic:
     prob = choice(os.listdir("./problems"))
 
-if show_prob:
-    print("The problem is " + prob)
-
 with open("./problems/" + prob + "/rating.txt", "r") as f:
     rating = int(f.readline())
 with open("./rating/" + prob[5] + ".txt", "r") as f:
     old_rating = int(f.readline())
 shutil.copyfile("./problems/" + prob + "/statement.html", "tmp.html")
-webbrowser.open("tmp.html")
+webbrowser.open("tmp.html", new=1)
+
+if show_prob:
+    print("The problem is " + prob + " (rating " + str(rating) + ").")
 
 expected = 1.0 / (1.0 + 10.0 ** ((rating - old_rating) / 800.0))
 
-solved = float(input("Solved? Enter 0 or 1: "))
+solved = float(input("Solved? Enter 0 or 1 (any other number to skip): "))
 
 if solved in [0, 1]:
     new_rating = int(old_rating + 120.0 * (solved - expected))
