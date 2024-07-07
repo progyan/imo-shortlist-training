@@ -14,9 +14,14 @@ topic = input("Choose topic A/C/G/N or leave empty: ")
 if topic not in "AGCN" or len(topic) > 1:
     raise Exception("Invalid topic")
 
+show_prob = input("Show problem source? y/N: ") in ["y", "Y", "Yes", "yes"]
+
 prob = choice(os.listdir("./problems"))
 while topic and prob[5] != topic:
     prob = choice(os.listdir("./problems"))
+
+if show_prob:
+    print("The problem is " + prob)
 
 with open("./problems/" + prob + "/rating.txt", "r") as f:
     rating = int(f.readline())
@@ -33,5 +38,6 @@ new_rating = int(old_rating + 120.0 * (solved - expected))
 
 with open("./rating/" + prob[5] + ".txt", "w") as f:
     f.write(str(new_rating) + "\n")
-print("The problem was " + prob + " (rating " + str(rating) + ").")
+if not show_prob:
+    print("The problem was " + prob + " (rating " + str(rating) + ").")
 print("Your rating in " + topics[prob[5]] + " became " + str(old_rating) + " -> \033[1m" + str(new_rating) + "\033[0m.")
