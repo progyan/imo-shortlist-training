@@ -34,10 +34,12 @@ expected = 1.0 / (1.0 + 10.0 ** ((rating - old_rating) / 800.0))
 
 solved = float(input("Solved? Enter 0 or 1: "))
 
-new_rating = int(old_rating + 120.0 * (solved - expected))
+if solved in [0, 1]:
+    new_rating = int(old_rating + 120.0 * (solved - expected))
 
-with open("./rating/" + prob[5] + ".txt", "w") as f:
-    f.write(str(new_rating) + "\n")
+    with open("./rating/" + prob[5] + ".txt", "w") as f:
+        f.write(str(new_rating) + "\n")
+    print("Your rating in " + topics[prob[5]] + " became " + str(old_rating) + " -> \033[1m" + str(new_rating) + "\033[0m.")
+    
 if not show_prob:
     print("The problem was " + prob + " (rating " + str(rating) + ").")
-print("Your rating in " + topics[prob[5]] + " became " + str(old_rating) + " -> \033[1m" + str(new_rating) + "\033[0m.")
